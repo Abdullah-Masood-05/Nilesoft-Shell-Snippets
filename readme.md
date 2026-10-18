@@ -1,3 +1,10 @@
+> [!NOTE]
+> **This is a fork of [RubicBG/Nilesoft-Shell-Snippets](https://github.com/RubicBG/Nilesoft-Shell-Snippets).** Every snippet here was written by **RubicBG** (Rubic), and all credit for them goes to him. Please star, report issues and send contributions to [his original repository](https://github.com/RubicBG/Nilesoft-Shell-Snippets).
+>
+> This fork exists so that [Nilesoft Shell Pro](https://github.com/Abdullah-Masood-05/Shell) can offer a reviewed selection of these snippets in its settings app, always pointing back to RubicBG's repository. Changes made here are small compatibility fixes, and they are offered back to the original repository as pull requests.
+
+---
+
 [`Nilesoft Shell`](https://nilesoft.org/) is an amazing program - it has become a hobby
 
 The idea is to start uploading my nss files one by one, making a description and screenshot. The truth is that I prefer to create new menus with commands than to make descriptions, so it won't happen soon. (I don't think anyone wants to do this "paperwork" anyway)
