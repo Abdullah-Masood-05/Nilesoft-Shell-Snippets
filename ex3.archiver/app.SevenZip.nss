@@ -81,10 +81,10 @@ menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=cmd_7zipA vi
 			item(title='Add to "@(sel.title).7z" with password' keys='Shift in secret' image=inherit
 				tip='in secret: Encrypts file headers, hiding file names, sizes, and metadata inside the archive. Only accessible with the correct password. Without this, file names are visible even if the contents are encrypted.'
 				cmd=if(input('NileSoft Shell', 'Enter password for archive') and len(input.result)>0, cmd_7zipG)
-				args='a @(sel.title).7z -t7z -p@input.result @if(keys.shift(), '-mhe') -sae -- @sel(true)')
+				args='a "@(sel.title).7z" -t7z -p@input.result @if(keys.shift(), '-mhe') -sae -- @sel(true)')
 			item(title='Add to "@(sel.title).zip" with password' image=inherit
 				cmd=if(input('NileSoft Shell', 'Enter password for archive') and len(input.result)>0, cmd_7zipG)
-				args='a @(sel.title).zip -tzip -p@input.result -sae -- @sel(true)')
+				args='a "@(sel.title).zip" -tzip -p@input.result -sae -- @sel(true)')
 			separator()
 			item(title='Add to "@(sel.title).7z" and delete' keys='SHIFT to .zip' image=inherit
 				tip='Deletes source files after successful compression.'
@@ -93,9 +93,9 @@ menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=cmd_7zipA vi
 			item(title='Add to...' keys='SHIFT to mail' image=inherit
 				cmd=cmd_7zipG args='a "@sel.title" -ad @if(keys.shift(), '-seml.') -sae -- @sel(true)')
 			item(title='Add to "@(sel.title).7z"' keys='SHIFT to mail' image=inherit
-				cmd=cmd_7zipG args='a @(sel.title).7z -t7z @if(keys.shift(), '-seml.') -sae -- @sel(true)')
+				cmd=cmd_7zipG args='a "@(sel.title).7z" -t7z @if(keys.shift(), '-seml.') -sae -- @sel(true)')
 			item(title='Add to "@(sel.title).zip"' keys='SHIFT to mail' image=inherit
-				cmd=cmd_7zipG args='a @(sel.title).zip -tzip @if(keys.shift(), '-seml.') -sae -- @sel(true)') }
+				cmd=cmd_7zipG args='a "@(sel.title).zip" -tzip @if(keys.shift(), '-seml.') -sae -- @sel(true)') }
 		item(title='Add to "@(sel.title).7z"' keys='SHIFT to .zip' image=inherit
 			cmd=cmd_7zipG args='a "@(sel.title)@if(!keys.shift(), '.7z" -t7z', '.zip" -tzip') -sae -- @sel(true)')
 		item(title='Add to "@(sel.parent.name).7z"' keys='SHIFT to .zip' image=inherit
@@ -105,16 +105,16 @@ menu(title='7-Zip' mode='multiple' type='file|dir|drive|back' image=cmd_7zipA vi
 			window=0 cmd-line='/c for %f in (@(sel(true," "))) do call "@cmd_7zipG" a "%~nf@if(!keys.shift(), '.7z" -t7z', '.zip" -tzip') -sae -- "%~f"')
 		item(title='Add to "@(sel.title).ppmd.7z" ' keys='SHIFT to .zip' find=is_se7z3
 			tip='PPMd compression is particularly effective for compressing text files that have a lot of repetitive patterns and structured content' image=inherit
-			cmd=cmd_7zipG args='a @(sel.title).ppmd@if(!keys.shift(), '.7z -t7z', '.zip -tzip') -m0=PPMd -sae -- @sel(true)')
+			cmd=cmd_7zipG args='a "@(sel.title).ppmd@if(!keys.shift(), '.7z" -t7z', '.zip" -tzip') -m0=PPMd -sae -- @sel(true)')
 		item(title='Add to "@(sel.parent.name).ppmd.7z" ' keys='SHIFT to .zip' find=is_se7z3
 			tip='PPMd compression is particularly effective for compressing text files that have a lot of repetitive patterns and structured content' image=inherit
-			cmd=cmd_7zipG args='a @(sel.parent.name).ppmd@if(!keys.shift(), '.7z -t7z', '.zip -tzip') -m0=PPMd -sae -- @sel(true)')
+			cmd=cmd_7zipG args='a "@(sel.parent.name).ppmd@if(!keys.shift(), '.7z" -t7z', '.zip" -tzip') -m0=PPMd -sae -- @sel(true)')
 		item(title='Add to "@(sel.title).sfx.exe"' keys='SHIFT no GUI' image=inherit
-			cmd=cmd_7zipG args='a @(sel.title).sfx.exe @if(!keys.shift(), '-sfx7z.sfx', '-sfx7zCon.sfx') -sae -- @sel(true)')
+			cmd=cmd_7zipG args='a "@(sel.title).sfx.exe" @if(!keys.shift(), '-sfx7z.sfx', '-sfx7zCon.sfx') -sae -- @sel(true)')
 		item(title='Add to "@(sel.parent.name).sfx.exe"' keys='SHIFT no GUI' image=inherit
-			cmd=cmd_7zipG args='a @(sel.parent.name).sfx.exe @if(!keys.shift(), '-sfx7z.sfx', '-sfx7zCon.sfx') -sae -- @sel(true)')
+			cmd=cmd_7zipG args='a "@(sel.parent.name).sfx.exe" @if(!keys.shift(), '-sfx7z.sfx', '-sfx7zCon.sfx') -sae -- @sel(true)')
 		item(title='Generate a file checksum ' image=inherit
-			cmd=cmd_7zipG args='a @(sel.name).sha256 -thash -sae -- @sel(true)') }
+			cmd=cmd_7zipG args='a "@(sel.name).sha256" -thash -sae -- @sel(true)') }
 	menu(title='Test...' type='file' image=svg_7z_test expanded=1) {
 		separator
 		item(title='Test archive@if(sel.count>1,'s')' find=is_se7z1 image=inherit
