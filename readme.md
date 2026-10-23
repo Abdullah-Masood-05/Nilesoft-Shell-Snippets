@@ -1,7 +1,7 @@
 > [!NOTE]
 > **This is a fork of [RubicBG/Nilesoft-Shell-Snippets](https://github.com/RubicBG/Nilesoft-Shell-Snippets).** Every snippet here was written by **RubicBG** (Rubic), and all credit for them goes to him. Please star, report issues and send contributions to [his original repository](https://github.com/RubicBG/Nilesoft-Shell-Snippets).
 >
-> This fork exists so that [Nilesoft Shell Pro](https://github.com/Abdullah-Masood-05/Shell) can offer a reviewed selection of these snippets in its settings app, always pointing back to RubicBG's repository. Changes made here are small compatibility fixes, and they are offered back to the original repository as pull requests.
+> RubicBG's collection is licensed CC0-1.0. With his permission, [Nilesoft Shell Pro](https://github.com/Abdullah-Masood-05/Shell) (from 2.1.0-beta.3) includes a checked selection of his snippets, copied unchanged from his repository and always credited to him. The app no longer downloads anything from this fork. It stays as a place for small compatibility fixes, which are offered back to the original repository as pull requests.
 
 ---
 
